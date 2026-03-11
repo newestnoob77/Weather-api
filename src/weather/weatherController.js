@@ -9,7 +9,7 @@ const cachedData =await client.get(cacheKey)
 if(cachedData){
     return res.json({
         source:"cache",
-        data:JSON.parse(cache)
+        data:JSON.parse(cachedData)
     })
 }
 const weatherData =await fetchWeather(city)
